@@ -1,7 +1,14 @@
 # SI-2024-CUBESAT-SU
 📡 Repository for Summer Internship 2024 "Intro To Cube-sat and Satellite Communication"
 
+Cubesats are small and standardized spacecraft used primarily for research purposes, typically launched into space as secondary payloads on larger missions or as part of dedicated small satellite launch programs. Here's a comprehensive overview of cubesats:
+### Characteristics of Cubesats:
+#### Size and Form Factor:
+Cubesats are small satellites with a standardized form factor based on cubic units called "units" or "U".
+The most common size is 10 cm x 10 cm x 10 cm (1U), but larger configurations such as 2U (10 cm x 10 cm x 20 cm) and 3U (10 cm x 10 cm x 30 cm) are also prevalent.
+They typically weigh between 1 to 10 kilograms, though larger variants exist.
 #Lab Exercies
+[ESP32](https://www.robotdazero.it/blog/esp32-i-segreti-del-suo-successo/)
 
 ##Lab-1 Introduction To ESP32
 
