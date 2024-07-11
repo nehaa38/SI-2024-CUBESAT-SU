@@ -1,0 +1,30 @@
+#define ledcSetup
+#define ledcAttachPin
+
+const int PWN_CHANNEL = 0;
+const int PWN_FREQ = 500;
+const int PWN_RESOLUTION = 8;
+
+const int MAX_DUTY_CYCLE=(int)(pow(2,PWN_RESOLUTION) -1);
+
+const int LED_OUTPUT_PIN = 5;
+
+const int DELAY_MS = 4;
+
+void setup() {
+  ledcSetup(PWN_CHANNEL,PWN_FREQ, PWN_RESOLUTION); 
+  
+  ledcAttachPin(LED_OUTPUT_PIN, PWN_CHANNEL);// put your setup code here, to run once:
+
+}
+
+void loop() {
+ for(int dutyCycle = 0; dutyCycle <= MAX_DUTY_CYCLE; dutyCycle++){
+  ledcWrite(PWN_CHANNEL, dutyCycle);
+  delay(DELAY_MS);
+ }
+ for(int dutyCycle =  MAX_DUTY_CYCLE; dutyCycle >=0; dutyCycle--){
+  ledcWrite(PWN_CHANNEL, dutyCycle);
+  delay(DELAY_MS);
+ }
+}
