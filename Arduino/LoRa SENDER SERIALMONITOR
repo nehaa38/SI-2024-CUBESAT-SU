@@ -1,0 +1,67 @@
+#include <SPI.h>
+
+#include <LoRa.h>
+
+//STD PIN DEF
+
+//#define DI0O 2
+
+//#define RST 14
+
+//#define NSS 5
+
+//#define MOSI 23
+
+//#define MISO 19
+
+//#define SCLK 18
+
+//TINYGS PIN DEF
+
+#define DI00 26
+
+#define RST 14
+
+#define NSS 18
+
+#define MOSI 27
+
+#define MISO 19
+
+#define SCLK 5
+
+int counter = 0;
+
+void setup() {
+  Serial.begin(115200);
+  while(!Serial);
+
+//initialize Serial Monitor Serial.begin(115200); while (Serial);
+
+ Serial.println("LoRa Sender");
+
+//setup LoRa transceiver module
+
+SPI.begin(SCLK, MISO, MOSI, NSS);
+LoRa.setPins(NSS,RST,DI00);
+
+while(!LoRa.begin(433E6)){
+  Serial.println(".");
+  delay(500);
+}
+LoRa.setSyncWord(0xF3);
+Serial.println("LoRa initializing OK");
+}
+void loop(){
+  Serial.print("sending packet: ");
+  Serial.println(counter);
+
+  LoRa.beginPacket();
+  LoRa.print("hello");
+  LoRa.print(counter);
+  LoRa.endPacket();
+
+  counter++;
+  delay(10000);
+}
+  
