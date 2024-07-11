@@ -1,0 +1,25 @@
+#define LED 2
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(LED,OUTPUT);
+
+
+
+}
+
+void loop() {
+  if (Serial.available()){
+    String command =Serial.readStringUntil('\n');
+    if(command == "ON"){
+      digitalWrite(LED,HIGH);
+      Serial.println("Turn LED ON");
+      delay(1000);
+    }
+    else if(command=="OFF"){
+       digitalWrite(LED,LOW);
+      Serial.println("Turn LED OFF");
+    }
+  }
+
+}
