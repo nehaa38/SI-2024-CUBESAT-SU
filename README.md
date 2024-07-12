@@ -108,5 +108,79 @@ The development of a CubeSat typically follows several key phases, each essentia
    - *Data Dissemination*: Archive mission data and prepare final reports or publications summarizing mission achievements and findings.
    - *Lessons Learned*: Conduct a review to identify lessons learned and areas for improvement in future CubeSat missions.
 
-   
-![CubeSat_Development_Process_Timeline](https://github.com/user-attachments/assets/34d15efc-cc3b-458e-bae7-9789397a7f23)
+
+![CubeSat_Development_Process_Timeline](https://github.com/user-attachments/assets/1f81d304-960d-49ac-af13-a60f6ad4ab5b)
+### MINIMAL PAYLOAD
+A minimal payload refers to the essential and streamlined set of instruments and subsystems carried by a CubeSat or small satellite mission. It is designed to achieve specific scientific or technological goals with minimal complexity and cost. Typically, a minimal payload configuration includes a primary instrument (such as a camera or spectrometer), basic avionics for satellite control and data handling, a simple power system (solar panels and batteries), a straightforward communication system, and a standard CubeSat structure.        (<img align="right" width="500" height="500" src="https://github.com/user-attachments/assets/04a9c08a-9465-4613-ba27-16fa7d9d543d"> This approach allows for cost-effective space missions, faster development timelines, and focused scientific or educational objectives, making CubeSats accessible to a broader range of users including educational institutions, startups, and small research organizations.           
+### CUBESAT ARCHITECTURE
+CubeSat architecture refers to the structural and functional design of CubeSats, which are standardized small satellites primarily used for scientific, educational, and technology demonstration purposes. The architecture of a CubeSat typically includes several key components and characteristics:
+
+1. **Structure**:
+   - CubeSats are based on a cubic structure, with a standard size of 10 cm × 10 cm × 10 cm (1U). Larger CubeSats can be multiples of this size (e.g., 2U, 3U, 6U).
+   - The structure provides mechanical support for all internal components and ensures the satellite's structural integrity during launch and in orbit.
+
+2. **Payload**:
+   - The payload is the primary scientific or technological instrument carried by the CubeSat. It can include cameras, spectrometers, magnetometers, radiation detectors, and other sensors depending on the mission objectives.
+   - The payload is typically housed within the CubeSat structure and interfaces with the satellite's avionics and power systems.
+
+3. **Avionics**:
+   - Avionics encompass the electronic systems necessary for controlling the CubeSat's operations. This includes:
+     - **Onboard Computer**: Manages satellite functions, data processing, and communication with ground stations.
+     - **Power System**: Regulates power distribution from solar panels and batteries to ensure continuous operation.
+     - **Attitude Determination and Control System (ADCS)**: Controls the orientation of the CubeSat using reaction wheels, magnetorquers, or other mechanisms.
+     - **Communication System**: Facilitates communication between the CubeSat and ground stations using antennas and radio transceivers.
+
+4. **Power System**:
+   - CubeSats typically use solar panels to generate electrical power from sunlight. This power is stored in rechargeable batteries to supply energy during eclipses or when solar panels are not exposed to sunlight.
+
+5. **Communication System**:
+   - CubeSats communicate with ground stations using radio frequencies allocated for satellite communication. This system includes antennas for transmitting data collected by the payload and receiving commands from Earth.
+
+6. **Thermal Control**:
+   - Thermal management is crucial to ensure that components operate within their temperature limits in the extreme conditions of space. This can include passive methods (insulation, coatings) and active methods (heaters, heat pipes).         (<img align="right" width="500" height="500" src="https://github.com/user-attachments/assets/9f4a0d0b-2246-4b63-833a-4f1877b57ed1">
+
+7. **Deployment Mechanism**:
+   - CubeSats are typically deployed from a dispenser or deployer system onboard a launch vehicle or the International Space Station (ISS). This mechanism ensures the CubeSat is safely released into its designated orbit.
+
+8. **Interfaces and Standards**:
+   - CubeSats adhere to standardized interfaces and specifications to ensure compatibility with launch vehicles, deployment systems, and ground stations. This includes mechanical, electrical, and communication interfaces.
+
+9. **Mission-Specific Adaptations**:
+   - Depending on the mission requirements, CubeSat architecture may include additional subsystems such as propulsion for orbital maneuvers or specialized sensors for specific scientific investigations.
+
+CubeSat architecture emphasizes modularity, scalability, and standardization, allowing for cost-effective development and deployment of small satellites for a wide range of space missions. These satellites have democratized access to space exploration and provided valuable opportunities for scientific research and technological innovation worldwide.
+
+# BASIC DIGITAL MODULATION
+- Digital modulation techniques are methods used to encode digital data onto analog carrier signals for transmission in communication systems.
+ ### BASIC BANDPASS MODULATION
+ - Bandpass modulation refers to a type of modulation technique where the baseband signal (which contains the information to be transmitted) is modulated onto a carrier signal that is within a specific frequency band. This carrier signal is usually centered around a higher frequency compared to the baseband signal. Bandpass modulation is essential in many communication systems to efficiently utilize the available frequency spectrum and ensure that signals can be transmitted over long distances with minimal interference.
+ - Key Characteristics of Bandpass Modulation:
+     - Frequency Spectrum: Bandpass modulation techniques utilize carrier signals within specific frequency bands allocated for transmission.
+
+     - Bandwidth Efficiency: Techniques like SSB and VSB are designed to minimize bandwidth usage while transmitting essential information effectively.
+
+     - Signal-to-Noise Ratio (SNR): Bandpass modulation helps in achieving better SNR compared to baseband techniques, particularly in long-distance communication.
+
+     - Interference Mitigation: By using specific frequency bands, bandpass modulation reduces the likelihood of interference from adjacent channels or other sources.
+
+Bandpass modulation techniques are integral to modern communication systems, offering flexibility, efficiency, and robustness in transmitting information over various types of communication channels, from radio waves to optical fibers. Their use ensures reliable and effective transmission of data, voice, and video signals across different applications and industries.
+- These techniques are crucial in modern telecommunications for efficiently and reliably transmitting digital information over various transmission media. Here are some commonly used digital modulation techniques:
+
+1. Amplitude Shift Keying (ASK)
+   - Description: ASK modulates the amplitude of a carrier signal to represent digital data.
+   - Operation: Different amplitude levels correspond to different digital symbols (e.g., 0 and 1).
+   - Applications: Simple and used in applications where bandwidth efficiency is not critical, such as low-cost communication systems.     (<img align="right" width="500" height="500" src="https://github.com/user-attachments/assets/dee767d3-4007-4b4f-a4ea-4da6705d8803">
+2. Frequency Shift Keying (FSK)
+   - Description: FSK modulates the frequency of the carrier signal to convey digital data.
+   - Operation: Different frequencies represent different digital symbols.
+   - Applications: Used in applications requiring moderate bandwidth efficiency, such as radio communications and data modems.      
+3. Phase Shift Keying (PSK)
+   - Description: PSK modulates the phase of the carrier signal to encode digital data.
+   - Operation: Different phase shifts represent different digital symbols.
+   - Variants:
+       - Binary Phase Shift Keying (BPSK): Two phase shifts (0° and 180°) represent binary symbols (0 and 1).
+       - Quadrature Phase Shift Keying (QPSK): Four phase shifts (0°, 90°, 180°, 270°) represent two bits per symbol.
+   - Applications: Used in satellite communication, Wi-Fi, and digital television.
+
+ 
+
