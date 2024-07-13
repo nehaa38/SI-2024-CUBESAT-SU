@@ -614,6 +614,8 @@ Strength Indicator)** and SNR through Serial monitor.
     - Sending Temperature and humidity packets and receiving the same packets with RSSI (Received Signal Strength Indicator) and SNR through a Serial monitor as well as an OLED display.
     - [sender](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/LoRa%20SENDER%20SERIALMONITOR)
     - [receiver](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/LoRa%20RECEIVER%20SERIALMONITOR)
+    - The temperature and humidity packets through DHT 21 and sent it through LoRa module with ESP 32 board to a serial monitor in form of packets is as folllws:
+[temperature and humidity](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/HUMIDITY%20TEMPERATURE%20DISPLAY)
  - **Lab 13: LoRa one-to-many communication setup**
     - Sending data packets from one Lora transmitter to multiple Lora receivers and retracing the same packets.
     - This scenario is typical in applications where a central node or gateway broadcasts information to multiple sensor nodes spread across a wide area.
