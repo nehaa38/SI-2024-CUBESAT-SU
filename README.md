@@ -519,8 +519,155 @@ A "Tiny GS" or Tiny Ground Station is a compact and portable unit used in satell
 
 
 # LAB EXERCISES
-- **Lab 1: Intro to ESP32 Programming**
+- **Lab 1: Intro to ESP32 Programming**     <img align="right" width="300" height="300" src="https://github.com/user-attachments/assets/20ddb962-f50b-4582-b006-37a860ee9fbe">
+
     - **Introduction to ESP32 development kit**
          The ESP32 is a popular and versatile microcontroller and Wi-Fi + Bluetooth module developed by Espressif Systems. It's widely used in IoT (Internet of Things) applications due to its powerful features and ease of integration.
-![wokwi-arduino-blinkled-esp32-simulator_TPoq73ITo0](https://github.com/user-attachments/assets/20ddb962-f50b-4582-b006-37a860ee9fbe)
+      
+Here is the code for blinking LED:
+[blinking led](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/blinking%20led)
+- **Lab 2: Intro to GPIO programming**
+    - We learnt to configure a GPIO as an output and control an LED with it.
+    - Using GPIO (General Purpose Input Output) pins on the ESP32 allows you to interface with various external components such as sen
+sors, actuators, displays, and other peripheral devices. ![gpio-pinout-diagram](https://github.com/user-attachments/assets/d9929c07-603b-4fe8-a37e-c88c95d570c1)
+- **Lab 3: Dimming LED using PWM**
+  - In this exercise we  used the ESP32 to control the light intensity of an external LED using PWM signal.
+     - Pulse-width modulation (PWM), also known as pulse-duration modulation (PDM) or pulse-length modulation (PLM), is any method of representing a signal as a rectangular wave with a varying duty cycle (and 
+       for some methods also a varying period).
+     ![ESP32 PWM gif](https://github.com/user-attachments/assets/f6158968-053f-4e87-a14b-72f010aef735)
 
+
+
+
+  - Here is the code to dimming LED using PWM
+
+    * [led dimming](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/LED%20FADING)
+
+  -  Parameters From the [LED Datasheet](docs/Datasheet-LED-XLMR01DE.pdf) :
+   
+
+       | Parameter | Values |
+       |---------|----------|
+       |Max Forward Current|30mA|
+       |Forward Voltage|1.85V|
+       |Colour|Red|
+       |Total Capacitance|45pF|
+       |Operating Range|-40 to 85 C|
+     
+ -  Parameters From the [ESP32 Datasheet](docs/Datasheet-ESP32.pdf) :
+   
+       | Parameters | Values |
+       |------------|--------|
+       |max output voltage | 4.34 V|
+       | max output current that GPIO can source from supply to load | .06mA |
+- **Lab 4: Dimming multiple LEDs**
+  - ESP32 GPIO pins were used to dim multiiple LEDs with different delays.   <img align="right" width="400" height="400" src="https://github.com/user-attachments/assets/b4d5d3fb-2346-44f5-9d20-2280d53207aa">
+
+  - Here is the code:[multiple led blinking](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/LED%20BLINKING%20USING%204%20LED)
+ 
+- **Lab 5: Printing data in the serial monitor**
+    -The Serial Monitor is an essential tool when creating projects with Arduino. It can be used as a debugging tool, testing concepts, or communicating directly with the Arduino board.
+    - he Arduino IDE 2 has the Serial Monitor tool integrated with the editor, which means that no external window is opened when using the Serial Monitor. This means that you can have multiple windows open, each with its own Serial Monitor.
+    - It is a fundamental way to debug and monitor the behavior of your microcontroller or development board.
+    - Printing data to the serial monitor is essential for debugging and monitoring your application’s behavior in real-time.
+- **Lab 6: Controlling an LED through serial monitor**
+    - Controlling an LED connected to ESP32 by reading commands from the serial monitor and turning the LED on or off based on those commands.
+    - Serial.begin(9600): Initializes serial communication with a baud rate of 9600. Make sure the baud rate in the Serial Monitor matches this value.
+    - pinMode(ledPin, OUTPUT): Configures ledPin (GPIO 13) as an output pin, which will control the LED.
+    - Serial.available(): Checks if there are any bytes available to read from the serial input buffer.
+    - Serial.read(): Reads the next byte of data from the serial port. In this case, it expects '0' to turn the LED OFF and '1' to turn the LED ON.
+    - digitalWrite(ledPin, HIGH) and digitalWrite(ledPin, LOW): These functions control the state of ledPin, setting it HIGH (ON) or LOW (OFF) based on the command received from the serial monitor.
+    - Serial.println(): Prints a message back to the serial monitor indicating the current state of the LED.
+- **Lab 7: I2C-based OLED Display control**
+    - I2C-based OLED pin details. Importing OLED libraries. Structure of the OLED. Displaying simple Text and Scrolling Text in different ways.
+    - Controlling an OLED display over I2C (Inter-Integrated Circuit) with an ESP32 involves initializing the I2C communication, sending commands and data to the display, and displaying text, graphics, or other elements on the OLED screen.
+    - **Components Needed:**
+      - ESP32 development board (e.g., ESP32 DevKit)
+      - I2C-based OLED display (e.g., SSD1306)
+- **Lab 8: Introduction Signal Processing using Python**
+  - Signal processing using Python is a broad field that involves manipulating and analyzing signals, which can range from audio and speech signals to biomedical data, images, and beyond. Python, with its rich ecosystem of libraries and tools, provides powerful capabilities for signal processing tasks.
+  - Computed the [FFT](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/FFT%20USING%20PYTHON) and [FSK](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/FSK%20USING%20PYTHON) of the above signal and plot it.
+   - We have notice the FFT resolution is very limited for a single cycle.
+   - Created another a signal of frequency 3MHz, add it to above signal and do FFT for the resultant signal.
+
+    <div style="display: flex; justify-content: space-between;">
+    <img src="https://github.com/user-attachments/assets/ad4fd081-c216-4e52-9384-360e680ce92e" alt="Image 1" style="width: 45%;">
+    <img src="https://github.com/user-attachments/assets/dc8ea4ee-9052-4beb-a24a-bb27abc41f99" alt="Image 2" style="width: 45%;">
+</div>
+
+- **Lab 9: I2C temperature sensor interface**
+    - Display of room temperature and humidity through OLED as well as serial monitor using DHT22 with ESP32.
+    - Interfacing an I2C temperature sensor with a microcontroller like the ESP32 involves reading temperature data from the sensor using the I2C protocol.
+    - [This](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/DHT) example demonstrates how to interface an I2C temperature sensor (LM75A) with an ESP32 using the Arduino IDE.
+    - By leveraging libraries like Adafruit LM75A, we can easily read temperature data from the sensor and integrate it into various IoT and embedded projects.
+- **Lab 10: Introduction to LoRa module**
+    - Introduction to architecture and pin configuration of Ra-02 Lora transceiver module and SPI (Serial Peripheral Interface) communication.
+    - LoRa (Long Range) is a low-power wide-area network (LPWAN) technology designed to enable long-range wireless communication with low power consumption.
+- **Lab 11: LoRa communication**
+    - Introduction to Lora communication using Ra-02 Lora transceiver module with ESP32.
+    -  LoRa modules offer a versatile solution for long-range, low-power IoT communication. With their ability to cover wide areas, operate at low power, and support secure and efficient communication, LoRa technology is increasingly adopted in various IoT applications.
+- **Lab 12: Communication between two LoRa nodes**
+    - Sending Text packets and receiving the text packets with **RSSI (Received Signal
+Strength Indicator)** and SNR through Serial monitor.
+    - RSSI is commonly used to assess the signal strength between a wireless client (e.g., smartphone) and an access point (AP).
+    - A higher RSSI value indicates a stronger connection, while a lower RSSI value suggests a weaker or more distant connection.
+    - Sending Temperature and humidity packets and receiving the same packets with RSSI (Received Signal Strength Indicator) and SNR through a Serial monitor as well as an OLED display.
+    - [sender](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/LoRa%20SENDER%20SERIALMONITOR)
+    - [receiver](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/LoRa%20RECEIVER%20SERIALMONITOR)
+ - **Lab 13: LoRa one-to-many communication setup**
+    - Sending data packets from one Lora transmitter to multiple Lora receivers and retracing the same packets.
+    - This scenario is typical in applications where a central node or gateway broadcasts information to multiple sensor nodes spread across a wide area.
+    - **Components Needed:**
+        - LoRa-enabled devices (e.g., LoRa modules, LoRaWAN gateways)
+        - Microcontroller development boards (e.g., Arduino with LoRa shield)
+        - Antennas suitable for LoRa frequency bands
+        - Power supply (e.g., batteries or power adapters)
+- **Lab 14: Introduction to antenna modeling and simulation software 4NEC2.**
+    - Tune it to 433MHz with the help of NanoVNA-A Portable VNA Antenna Analyzer Kit with 10KHz-1.5GHz, 2.8 Inch Digital LCD Display Touching Screen Standing Wave Measuring Instrument.
+    - 4NEC2 is a popular antenna modeling and simulation software used primarily for designing and analyzing antennas.
+    - It is based on the Numerical Electromagnetics Code (NEC-2) simulation engine, which is a method of moments (MoM) solver for electromagnetic structures.
+    - [4nec2](LABS/4nec2)
+- **Lab 15: Physical design of Dipole and V-dipole antennas**
+    - Designing dipole and V-dipole antennas involves understanding their basic structure, dimensions, and the principles that govern their radiation patterns and impedance characteristics.
+    - **Design Considerations for Both Antennas:**
+        - **Frequency of Operation:** Determine the wavelength (λ) corresponding to the operating frequency to calculate the appropriate dipole lengths.
+        - **Environment:** Consider the surroundings (e.g., near buildings, ground plane effects) as they can affect the antenna's impedance and radiation pattern.
+        - **Simulation and Testing:** Use antenna modeling software (like 4NEC2) or practical measurements to validate antenna performance and adjust dimensions as needed.
+        - **Feedline Matching:** Implement baluns or impedance matching networks to ensure efficient power transfer between the transmitter and antenna.
+- **Lab 16: Introduction to TinyGS**
+    - TinyGS is a global initiative aimed at deploying a constellation of tiny satellites equipped with software-defined radios (SDRs) to enable global satellite communication for educational, research, and amateur radio purposes
+    -  A Tiny Ground Station (Tiny GS) is a compact and portable communication unit used in satellite operations. It serves as a vital link between ground control and satellites orbiting Earth, facilitating tasks such as data transmission, command delivery, and telemetry reception. Designed for mobility and ease of deployment, Tiny GS units are equipped with antennas and radio frequency (RF) transceivers capable of communicating with satellites. They are used in various applications including educational projects, small satellite missions (like CubeSats), and emergency response scenarios where rapid deployment and cost-effective communication solutions are essential.
+  [SITBBS_02.xlsx](https://github.com/user-attachments/files/16190096/SITBBS_02.xlsx)
+
+  ![f23f8a8e-ddc3-48df-843a-f847bcb5b307 (4)](https://github.com/user-attachments/assets/11af943b-c581-4230-995d-e1489607f9f0)
+
+  
+
+
+    
+
+
+ 
+We have set up a ground station recieving telemetary packets from the satellite passing by. 
+
+<img width="752" alt="WWW" src="https://github.com/Rajesh100903/SI-2024-22BECB73/assets/173932157/0802292e-3368-4b23-9260-99e6ac131e32">
+
+<img width="322" alt="W is worst" src="https://github.com/Rajesh100903/SI-2024-22BECB73/assets/173932157/7e5f54f8-42f7-4e9c-adf1-33e4f8ffea55">
+
+The link to our tiny GS research station is 
+[SITBBS_02](https://tinygs.com/station/SITBBS2_0GS@5483354857)
+
+We had recieved about 49 telemetery packets from the different satelites. The data is as follows--[SITBBS_02.xlsx](https://github.com/user-attachments/files/16190096/SITBBS_02.xlsx)
+- **Lab 18: Processing TLE data with Python**
+    - Using genAI tool (ChatGPT, CoPilot, etc) find out the detail about the satellite Two-Line Element (TLE) format.
+    - Write a Python programm to conver a TLE of satellite into a Lat/Long location.
+      - You can get all the TLEs of satellites tracked by TinyGS [here](https://api.tinygs.com/v1/tinygs_supported.txt)
+    - Generate the output as an URL that you can paste in a browser and get the satellite location.
+    - And modify the above program such the [TLE data file](https://api.tinygs.com/v1/tinygs_supported.txt) can be given as input with the two line numbers to process.
+- **Lab 19: Simulating Digital Spread Spectrum Modulation**
+    - Resimulate FSK from Lab 8
+    - Introduce code to convert the digital data into spread spectrum before modulating it to a higher frequency.
+    - Simulating Digital Spread Spectrum Modulation involves using software tools to model and analyze the behavior of spread spectrum communication techniques, which are widely used in wireless communication systems for their robustness against interference and security advantages.
+    - Spread spectrum modulation techniques spread the signal over a wider bandwidth compared to the minimum necessary for the transmission of information. 
+
+      
