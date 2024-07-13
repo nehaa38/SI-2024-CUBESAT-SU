@@ -636,6 +636,8 @@ Strength Indicator)** and SNR through Serial monitor.
         - **Environment:** Consider the surroundings (e.g., near buildings, ground plane effects) as they can affect the antenna's impedance and radiation pattern.
         - **Simulation and Testing:** Use antenna modeling software (like 4NEC2) or practical measurements to validate antenna performance and adjust dimensions as needed.
         - **Feedline Matching:** Implement baluns or impedance matching networks to ensure efficient power transfer between the transmitter and antenna.
+          ![WhatsApp Image 2024-07-13 at 14 02 47_dcdae14a](https://github.com/user-attachments/assets/abcf5572-73ea-4cc7-8808-4775110234bc)
+
 - **Lab 16: Introduction to TinyGS**
     - TinyGS is a global initiative aimed at deploying a constellation of tiny satellites equipped with software-defined radios (SDRs) to enable global satellite communication for educational, research, and amateur radio purposes
     -  A Tiny Ground Station (Tiny GS) is a compact and portable communication unit used in satellite operations. It serves as a vital link between ground control and satellites orbiting Earth, facilitating tasks such as data transmission, command delivery, and telemetry reception. Designed for mobility and ease of deployment, Tiny GS units are equipped with antennas and radio frequency (RF) transceivers capable of communicating with satellites. They are used in various applications including educational projects, small satellite missions (like CubeSats), and emergency response scenarios where rapid deployment and cost-effective communication solutions are essential.
@@ -652,6 +654,13 @@ Strength Indicator)** and SNR through Serial monitor.
 5. **Cost-Effective**: Provides affordable satellite communication solutions compared to larger ground stations.
    
 6. **Integration**: Compatible with different satellite platforms and ground control systems for seamless operation.
+ #### Lab 17: Setting up a TinyGS ground station
+ - Plug in your ESP to a USB port. It will install TinyGS 2403242 to it.
+ - Hit "Install" and select the correct COM port. No device found?
+ - MQTT credentials (First join the group here)
+ - Then open a private chat with [@tinygs_personal_bot](https://t.me/tinygs_personal_bot) and ask /mqtt
+ - First time board boot, connect to the wifi AP "My TinyGS" to configure it.
+ - Get TinyGS installed and connected in less than 5 minutes!
 
 These features make Tiny GS units ideal for enhancing satellite communication accessibility and operational flexibility in diverse scenarios.
   [SITBBS_02.xlsx](https://github.com/user-attachments/files/16190096/SITBBS_02.xlsx)
