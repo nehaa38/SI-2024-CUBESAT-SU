@@ -518,5 +518,9 @@ A "Tiny GS" or Tiny Ground Station is a compact and portable unit used in satell
 ![WhatsApp Image 2024-07-13 at 10 38 24_c2b21595](https://github.com/user-attachments/assets/56285691-a2d9-4e58-9c3e-85a9a1671a2c)
 
 
-
+# LAB EXERCISES
+- **Lab 1: Intro to ESP32 Programming**
+    - **Introduction to ESP32 development kit**
+         The ESP32 is a popular and versatile microcontroller and Wi-Fi + Bluetooth module developed by Espressif Systems. It's widely used in IoT (Internet of Things) applications due to its powerful features and ease of integration.
+![wokwi-arduino-blinkled-esp32-simulator_TPoq73ITo0](https://github.com/user-attachments/assets/20ddb962-f50b-4582-b006-37a860ee9fbe)
 
