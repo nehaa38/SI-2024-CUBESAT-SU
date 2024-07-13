@@ -598,7 +598,7 @@ sors, actuators, displays, and other peripheral devices. ![gpio-pinout-diagram](
 - **Lab 9: I2C temperature sensor interface**
     - Display of room temperature and humidity through OLED as well as serial monitor using DHT22 with ESP32.
     - Interfacing an I2C temperature sensor with a microcontroller like the ESP32 involves reading temperature data from the sensor using the I2C protocol.
-    - [This](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/DHT) example demonstrates how to interface an I2C temperature sensor (LM75A) with an ESP32 using the Arduino IDE.
+    - Here,[This](https://github.com/nehaa38/SI-2024-CUBESAT-SU/blob/main/Arduino/DHT) example demonstrates how to interface an I2C temperature sensor (LM75A) with an ESP32 using the Arduino IDE.
     - By leveraging libraries like Adafruit LM75A, we can easily read temperature data from the sensor and integrate it into various IoT and embedded projects.
 - **Lab 10: Introduction to LoRa module**
     - Introduction to architecture and pin configuration of Ra-02 Lora transceiver module and SPI (Serial Peripheral Interface) communication.
@@ -639,17 +639,26 @@ Strength Indicator)** and SNR through Serial monitor.
 - **Lab 16: Introduction to TinyGS**
     - TinyGS is a global initiative aimed at deploying a constellation of tiny satellites equipped with software-defined radios (SDRs) to enable global satellite communication for educational, research, and amateur radio purposes
     -  A Tiny Ground Station (Tiny GS) is a compact and portable communication unit used in satellite operations. It serves as a vital link between ground control and satellites orbiting Earth, facilitating tasks such as data transmission, command delivery, and telemetry reception. Designed for mobility and ease of deployment, Tiny GS units are equipped with antennas and radio frequency (RF) transceivers capable of communicating with satellites. They are used in various applications including educational projects, small satellite missions (like CubeSats), and emergency response scenarios where rapid deployment and cost-effective communication solutions are essential.
+    -  Here are some key features of a Tiny Ground Station (Tiny GS):
+
+1. **Compact Size**: Designed to be small and portable for easy transportation and deployment.
+   
+2. **Portable Power**: Often equipped with battery or solar power options for remote operation.
+   
+3. **Communication Capabilities**: Includes antennas and RF transceivers for establishing communication links with satellites.
+   
+4. **Versatility**: Suitable for various applications including educational projects, small satellite missions, and emergency response.
+
+5. **Cost-Effective**: Provides affordable satellite communication solutions compared to larger ground stations.
+   
+6. **Integration**: Compatible with different satellite platforms and ground control systems for seamless operation.
+
+These features make Tiny GS units ideal for enhancing satellite communication accessibility and operational flexibility in diverse scenarios.
   [SITBBS_02.xlsx](https://github.com/user-attachments/files/16190096/SITBBS_02.xlsx)
 
   ![f23f8a8e-ddc3-48df-843a-f847bcb5b307 (4)](https://github.com/user-attachments/assets/11af943b-c581-4230-995d-e1489607f9f0)
 
   
-
-
-    
-
-
- 
 We have set up a ground station recieving telemetary packets from the satellite passing by. 
 
 <img width="752" alt="WWW" src="https://github.com/Rajesh100903/SI-2024-22BECB73/assets/173932157/0802292e-3368-4b23-9260-99e6ac131e32">
